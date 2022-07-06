@@ -9,7 +9,12 @@ public class IndexController {
 
     @GetMapping("")
     public String index() {
-        return "content/start/start";
+        return "content/start/index";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "content/start/login";
     }
 
     @ResponseBody
