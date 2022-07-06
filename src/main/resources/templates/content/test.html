@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/sample">
+
+<th:block layout:fragment="f-title">main</th:block>
+
+<section layout:fragment="f-content">
+    <div class="container">
+        <div class="d-title">
+            <h2>test</h2>
+        </div>
+        <div class="d-content">
+            <div class="row">
+                <ul>
+                    <li>sample1</li>
+                    <li>sample2</li>
+                    <li>sample3</li>
+                    <li>sample4</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

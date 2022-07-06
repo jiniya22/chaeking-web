@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <title>
+    <th:block layout:fragment="f-title">demo</th:block>
+  </title>
+  <th:block th:insert="fragment/header :: f-header-basic"></th:block>
+  <link rel="stylesheet" type="text/css" th:href="@{/static/css/common.css}"/>
+</head>
+<body>
+<header>
+  <h1>
+    <a th:href="@{/v}"><img th:src="@{/static/img/book.png}" width="50" height="auto" alt="demo page" id="btn_home" /></a>
+  </h1>
+</header>
+<nav class="navbar navbar-expand-lg navbar-light" id="nav_area">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_menu_area" style="margin: 3px;">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+<section layout:fragment="f-content"></section>
+<footer>
+  <p>
+    CHAECKING
+  </p>
+</footer>
+
+<th:block th:insert="fragment/footer :: f-footer-basic"></th:block>
+<th:block layout:fragment="f-script"></th:block>
+</body>
+</html>
