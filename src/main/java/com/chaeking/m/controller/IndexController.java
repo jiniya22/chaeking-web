@@ -9,7 +9,7 @@ public class IndexController {
 
     @GetMapping("")
     public String index() {
-        return "content/test";
+        return "content/login";
     }
 
     @ResponseBody

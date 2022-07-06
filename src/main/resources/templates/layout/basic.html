@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <title>
+    <th:block layout:fragment="f-title">책킹</th:block>
+  </title>
+  <th:block th:insert="fragment/header :: f-basic"></th:block>
+</head>
+<body>
+<section layout:fragment="f-content"></section>
+
+<th:block th:insert="fragment/footer :: f-basic"></th:block>
+  <script>
+    window.onload = function() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+  </script>
+</body>
+</html>
