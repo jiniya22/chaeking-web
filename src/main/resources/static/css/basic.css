@@ -20,6 +20,7 @@ i {
     justify-content: center;
     align-items: center;
     height: 60%;
+    max-height: calc(100vh - 180px);
     vertical-align: middle;
 }
 .d__home .d__logo {

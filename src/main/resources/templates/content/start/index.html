@@ -20,3 +20,13 @@
         </div>
     </div>
 </section>
+
+<th:block layout:fragment="f-script">
+    <script>
+        window.onload = function() {
+            document.getElementById("btn__login").onclick = () => {
+                location.href = "[[@{/login}]]";
+            };
+        };
+    </script>
+</th:block>
