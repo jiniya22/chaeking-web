@@ -31,6 +31,30 @@ i {
 .d__container .s__basic {
     height: calc(100% - 70px);
 }
+.d__container .s__chaeking {
+    height: calc(100% - 115px);
+}
+.f__basic {
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #e5e5e5;
+}
+.f__basic .d__menu {
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    margin: 10px;
+    cursor: pointer;
+}
+.f__basic #menu_1 { background-image: url('../img/menu/menu_1_inactive.png'); }
+.f__basic #menu_2 { background-image: url('../img/menu/menu_2_inactive.png'); }
+.f__basic #menu_3 { background-image: url('../img/menu/menu_3_inactive.png'); }
+.f__basic #menu_4 { background-image: url('../img/menu/menu_4_inactive.png'); }
+.f__basic #menu_1.active { background-image: url('../img/menu/menu_1_active.png'); }
+.f__basic #menu_2.active { background-image: url('../img/menu/menu_2_active.png'); }
+.f__basic #menu_3.active { background-image: url('../img/menu/menu_3_active.png'); }
+.f__basic #menu_4.active { background-image: url('../img/menu/menu_4_active.png'); }
 .d__home {
     margin: 0 auto;
     position: relative;
@@ -62,14 +86,14 @@ i {
     border: 2px solid #e5e5e5;
     color: #6c757d;
 }
-.d__content #a__join {
+.d__content .a__join {
     text-decoration: underline;
     text-underline-offset: 2px;
     color: #6c757d;
     font-size: .8em;
     cursor: pointer;
 }
-.d__content #a__join:hover {
+.d__content .a__join:hover {
     color: #393c3e
 }
 .d__content .d__input_group {
@@ -80,16 +104,9 @@ i {
     margin: 10px 0;
 }
 .d__content .d__input_group .d__input > label {
-    font-size: .8em;
+    font-size: .85em;
     margin: 3px 0;
 }
 .d__content .d__input_group .d__input .btn-group label {
     font-size: .95em;
-}
-
-.i-check-solid {
-    background-image: url(../img/font-awesome/check-solid.svg);
-    background-size: contain;
-    width: 16px;
-    height: 14px;
 }
