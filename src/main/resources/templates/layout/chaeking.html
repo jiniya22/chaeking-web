@@ -16,16 +16,22 @@
 <div class="d__container">
   <header class="h__basic" layout:fragment="f-head">
     <img th:src="@{/img/back.png}" width="11.67" height="19.8" alt="이전" id="btn-back">
+    <th:block layout:fragment="f-head-content"></th:block>
   </header>
   <section class="s__chaeking" layout:fragment="f-content"></section>
   <footer class="f__basic">
-    <div class="d__menu active" id="menu_1"></div>
-    <div class="d__menu" id="menu_2"></div>
-    <div class="d__menu" id="menu_3"></div>
-    <div class="d__menu" id="menu_4"></div>
+    <div class="d__menu" id="menu_1" th:classappend="${menu_type eq 'menu_1'} ? 'active' : ''"></div>
+    <div class="d__menu" id="menu_2" th:classappend="${menu_type eq 'menu_2'} ? 'active' : ''"></div>
+    <div class="d__menu" id="menu_3" th:classappend="${menu_type eq 'menu_3'} ? 'active' : ''"></div>
+    <div class="d__menu" id="menu_4" th:classappend="${menu_type eq 'menu_4'} ? 'active' : ''"></div>
   </footer>
 </div>
 <th:block th:insert="fragment/footer :: f-basic"></th:block>
+<script>
+  window.onload = function() {
+    document.getElementById("menu_3").onclick = () => location.href = "[[@{/books}]]";
+  };
+</script>
 <th:block layout:fragment="f-script"></th:block>
 </body>
 </html>

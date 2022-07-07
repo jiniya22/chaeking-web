@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/chaeking">
+
+<th:block layout:fragment="f-title">책 검색</th:block>
+<th:block layout:fragment="f-head-content">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Dropdown</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with dropdown button">
+    </div>
+</th:block>
+
+<section layout:fragment="f-content">
+    <div class="d__content">
+        <div>
+            Proto 님,<br>
+            오늘은 어떤 책을<br>
+            기록하고 싶으신가요?
+        </div>
+    </div>
+</section>
