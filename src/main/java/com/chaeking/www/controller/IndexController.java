@@ -1,4 +1,4 @@
-package com.chaeking.m.controller;
+package com.chaeking.www.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

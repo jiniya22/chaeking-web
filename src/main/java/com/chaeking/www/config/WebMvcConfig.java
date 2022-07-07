@@ -1,4 +1,4 @@
-package com.chaeking.m.config;
+package com.chaeking.www.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;

@@ -1,4 +1,4 @@
-package com.chaeking.m;
+package com.chaeking.www;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
