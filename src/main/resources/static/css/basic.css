@@ -1,6 +1,4 @@
-:root {
-    --vh: 1vh;
-}
+
 body {
     overflow-y: hidden;
 }
@@ -24,9 +22,6 @@ i {
     align-items: center;
     height: 70px;
     padding: 0 20px;
-}
-#btn-back {
-    cursor: pointer;
 }
 .d__container .s__basic {
     display: flex;
@@ -80,6 +75,7 @@ i {
     background-size: contain;
     width: 12px;
     height: 20px;
+    cursor: pointer;
 }
 .d__content {
     width: 100%;
