@@ -1,13 +1,16 @@
-
+:root {
+    --w: 360px;
+    --line-basic: #e5e5e5;
+}
 body {
     overflow-y: hidden;
 }
 .d__container {
-    font-size: 10pt;
-    width: 360px;
+    font-size: 12pt;
+    width: var(--w);
     height: calc(var(--vh, 1vh) * 100); /* 568px; */
     margin: 0 auto;
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--line-basic);
     overflow-y: hidden;
     font-family: Pretendard, 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, Dotum, Gulim, Helvetica, Sans-serif;
 }
@@ -36,7 +39,7 @@ i {
     height: 45px;
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid var(--line-basic);
 }
 .f__basic .d__menu {
     width: 25px;
@@ -89,7 +92,7 @@ i {
 }
 .d__content button {
     margin: 10px;
-    border: 2px solid #e5e5e5;
+    border: 2px solid var(--line-basic);
     color: #6c757d;
 }
 .d__content .a__join {
@@ -98,6 +101,7 @@ i {
     color: #6c757d;
     font-size: .8em;
     cursor: pointer;
+    padding: 2px;
 }
 .d__content .a__join:hover {
     color: #393c3e
