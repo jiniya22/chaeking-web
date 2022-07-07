@@ -29,6 +29,9 @@ i {
     cursor: pointer;
 }
 .d__container .s__basic {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
     height: calc(100% - 70px);
 }
 .d__container .s__chaeking {
@@ -72,7 +75,14 @@ i {
     width: 70px;
     height: 70px;
 }
+#btn__back {
+    background-image: url(../img/back.png);
+    background-size: contain;
+    width: 12px;
+    height: 20px;
+}
 .d__content {
+    width: 100%;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -109,4 +119,8 @@ i {
 }
 .d__content .d__input_group .d__input .btn-group label {
     font-size: .95em;
+}
+
+.col-12 {
+    padding: 0 !important;
 }
