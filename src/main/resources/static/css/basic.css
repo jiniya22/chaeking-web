@@ -5,13 +5,16 @@ body {
     overflow-y: hidden;
 }
 .d__container {
-    font-size: 12pt;
+    font-size: 10pt;
     width: 360px;
     height: calc(var(--vh, 1vh) * 100); /* 568px; */
     margin: 0 auto;
     border: 1px solid #e5e5e5;
     overflow-y: hidden;
     font-family: Pretendard, 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, Dotum, Gulim, Helvetica, Sans-serif;
+}
+.d__container div {
+    font-size: 1em;
 }
 i {
     margin: 0 5px;
@@ -21,6 +24,9 @@ i {
     align-items: center;
     height: 70px;
     padding: 0 20px;
+}
+#btn-back {
+    cursor: pointer;
 }
 .d__container .s__basic {
     height: calc(100% - 70px);
@@ -73,7 +79,17 @@ i {
     width: 100%;
     margin: 10px 0;
 }
-.d__content .d__input_group .d__input label {
+.d__content .d__input_group .d__input > label {
     font-size: .8em;
     margin: 3px 0;
+}
+.d__content .d__input_group .d__input .btn-group label {
+    font-size: .95em;
+}
+
+.i-check-solid {
+    background-image: url(../img/font-awesome/check-solid.svg);
+    background-size: contain;
+    width: 16px;
+    height: 14px;
 }

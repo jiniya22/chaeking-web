@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/basic">
+
+<th:block layout:fragment="f-title">책킹 로그인</th:block>
+<th:block layout:fragment="f-header">
+<style>
+.d__home {
+    height: 25%;
+    max-height: calc(100vh - 418px);
+}
+.d__content {
+    min-height: 418px;
+}
+#btn__login {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+</style>
+</th:block>
+<section layout:fragment="f-content">
+    <div class="d__home">
+        <div class="d__logo"></div>
+    </div>
+    <form method="post" class="d__content">
+        <div class="d__input_group">
+            <div class="d__input">
+                <label class="control-label col-12" for="email">이메일</label>
+                <input type="text" id="email" name="email" class="form-control" autocomplete="off" required/>
+            </div>
+            <div class="d__input">
+                <label class="control-label col-12" for="password">비밀번호</label>
+                <input type="password" id="password" name="password" class="form-control" autocomplete="off" required/>
+            </div>
+            <div class="d__input">
+                <label class="control-label col-12">성별</label>
+                <div class="btn-group col-12" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="sex" id="sex1" value="M" autocomplete="off" checked>
+                    <label class="btn btn-outline-secondary" for="sex1">남자</label>
+                    <input type="radio" class="btn-check" name="sex" id="sex2" value="W" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="sex2">여자</label>
+                </div>
+            </div>
+            <div class="d__input">
+                <label class="control-label col-12" for="nickname">닉네임</label>
+                <input type="text" id="nickname" name="nickname" class="form-control" autocomplete="off" required/>
+            </div>
+
+        </div>
+        <button type="button" class="btn btn-secondary text-light form-control" id="btn__login">
+            <i class="fa-solid fa-check"></i>
+            회원 가입
+        </button>
+    </form>
+</section>

@@ -13,8 +13,13 @@ public class IndexController {
     }
 
     @GetMapping("/login")
-    public String login() {
+    public String loginPage() {
         return "content/start/login";
+    }
+
+    @GetMapping("/join")
+    public String joinPage() {
+        return "content/start/join";
     }
 
     @ResponseBody

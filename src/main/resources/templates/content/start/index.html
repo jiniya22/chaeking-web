@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko"
-      xmlns:th="http://www.thymeleaf.org"
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="layout/basic">
 
@@ -16,16 +15,15 @@
             <i class="fa-solid fa-at"></i>
             이메일로 로그인하기
         </button>
-        <a id="a__join">회원가입</a>
+        <a id="a__join" th:href="@{/join}">회원가입</a>
     </div>
 </section>
 
 <th:block layout:fragment="f-script">
     <script>
         window.onload = function() {
-            document.getElementById("btn__login").onclick = () => {
-                location.href = "[[@{/login}]]";
-            };
+            document.getElementById("btn__login").onclick = () => location.href = "[[@{/login}]]";
+            // document.getElementById("a__login").onclick = () => location.href = "[[@{/join}]]";
         };
     </script>
 </th:block>
