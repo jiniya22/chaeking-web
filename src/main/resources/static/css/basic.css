@@ -1,6 +1,9 @@
 :root {
     --vh: 1vh;
 }
+body {
+    overflow-y: hidden;
+}
 .d__container {
     font-size: 12pt;
     width: 360px;
@@ -12,6 +15,15 @@
 }
 i {
     margin: 0 5px;
+}
+.d__container .h__basic {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+}
+.d__container .s__basic {
+    height: calc(100% - 70px);
 }
 .d__home {
     margin: 0 auto;
@@ -37,7 +49,7 @@ i {
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    padding: 1.5em;
+    padding: 20px;
 }
 .d__content button {
     margin: 10px;
