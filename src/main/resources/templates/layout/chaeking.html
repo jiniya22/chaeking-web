@@ -30,13 +30,18 @@
 <script>
   const $menu_1 = document.getElementById("menu_1");
   const $menu_3 = document.getElementById("menu_3");
+  const $menu_4 = document.getElementById("menu_4");
   $menu_1.onclick = () => {
     if(!$menu_1.classList.contains('active'))
       location.href = "[[@{/test}]]";
   }
   $menu_3.onclick = () => {
     if(!$menu_3.classList.contains('active'))
-      location.href = "[[@{/books}]]";
+      location.href = "[[@{/book}]]";
+  }
+  $menu_4.onclick = () => {
+    if(!$menu_4.classList.contains('active'))
+      location.href = "[[@{/setting/main}]]";
   }
 </script>
 <th:block layout:fragment="f-script"></th:block>

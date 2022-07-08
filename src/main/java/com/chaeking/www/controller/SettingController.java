@@ -5,14 +5,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-@RequestMapping("/book")
+@RequestMapping("/setting")
 @RestController
-public class BookController {
+public class SettingController {
 
-    @GetMapping("")
-    public ModelAndView searchPage() {
-        ModelAndView mv = new ModelAndView("content/chaeking/book_search");
-        mv.addObject("menu_type", "menu_3");
+    @GetMapping("/main")
+    public ModelAndView settingMainPage() {
+        ModelAndView mv = new ModelAndView("content/chaeking/setting_main");
+        mv.addObject("menu_type", "menu_4");
         return mv;
     }
 }

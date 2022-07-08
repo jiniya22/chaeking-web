@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/chaeking">
+
+<th:block layout:fragment="f-title">책킹</th:block>
+
+<header class="h__basic fd__row_reverse" layout:fragment="f-head">
+    <i id="i__more" class="bi bi-three-dots"></i>
+</header>
+<section layout:fragment="f-content">
+    <div class="d__content">
+        <div class="d__profile">
+            <div id="user__image">
+                <img src="http://localhost:8080/static/img/user.png" alt="${m['name']}">
+            </div>
+            <div class="user__info">
+                <div class="user__name">솔</div>
+                <div class="user__email">sol@applebox.xyz</div>
+            </div>
+        </div>
+    </div>
+</section>

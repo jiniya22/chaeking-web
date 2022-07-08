@@ -38,7 +38,7 @@ function parentsUntil(el, selector, filter) {
 }
 
 function fn_get_chaeking_api_url() {
-    let chaeking_url = 'https://api.chaeking.co.kr';
+    let chaeking_url = 'https://api.chaeking.com';
     if('localhost' === document.domain) {
         chaeking_url = 'http://localhost:8080';
     }
