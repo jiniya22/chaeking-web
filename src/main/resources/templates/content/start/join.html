@@ -38,13 +38,11 @@
             </div>
             <div class="d__input">
                 <label class="control-label col-12">성별</label>
-                <div class="btn-group col-12 btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-outline-secondary active">
-                        <input type="radio" name="sex" id="sex1" checked>남자
-                    </label>
-                    <label class="btn btn-outline-secondary">
-                        <input type="radio" name="sex" id="sex2">여자
-                    </label>
+                <div class="btn-group col-12" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="sex" id="sex1" value="M" autocomplete="off" checked>
+                    <label class="btn btn-outline-secondary" for="sex1">남자</label>
+                    <input type="radio" class="btn-check" name="sex" id="sex2" value="W" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="sex2">여자</label>
                 </div>
             </div>
             <div class="d__input">
