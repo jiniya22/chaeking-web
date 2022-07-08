@@ -3,7 +3,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="layout/chaeking">
 
-<th:block layout:fragment="f-title">책킹</th:block>
+<th:block layout:fragment="f-title">책킹 - 설정</th:block>
 
 <header class="h__basic fd__row_reverse" layout:fragment="f-head">
     <i id="i__more" class="bi bi-three-dots"></i>
@@ -14,10 +14,17 @@
             <div id="user__image">
                 <img src="http://localhost:8080/static/img/user.png" alt="${m['name']}">
             </div>
-            <div class="user__info">
+            <div id="user__info" class="btn">
                 <div class="user__name">솔</div>
                 <div class="user__email">sol@applebox.xyz</div>
             </div>
         </div>
     </div>
 </section>
+
+<th:block layout:fragment="f-script">
+    <script>
+        const $user_info = document.getElementById("user__info");
+        $user_info.onclick = () => location.href = "[[@{/setting/user}]]";
+    </script>
+</th:block>

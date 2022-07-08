@@ -9,10 +9,26 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class SettingController {
 
+    static String menuType = "menu_4";
+
     @GetMapping("/main")
     public ModelAndView settingMainPage() {
-        ModelAndView mv = new ModelAndView("content/chaeking/setting_main");
-        mv.addObject("menu_type", "menu_4");
+        ModelAndView mv = new ModelAndView("content/chaeking/setting/main");
+        mv.addObject("menu_type", menuType);
+        return mv;
+    }
+
+    @GetMapping("/system")
+    public ModelAndView settingSystemPage() {
+        ModelAndView mv = new ModelAndView("content/chaeking/setting/system");
+        mv.addObject("menu_type", menuType);
+        return mv;
+    }
+
+    @GetMapping("/user")
+    public ModelAndView settingUserPage() {
+        ModelAndView mv = new ModelAndView("content/chaeking/setting/user");
+        mv.addObject("menu_type", menuType);
         return mv;
     }
 }

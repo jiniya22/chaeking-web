@@ -183,10 +183,9 @@ body {
       width: 100%;
       height: 65px;
       #user__image {
-        margin-right: 10px;
         img { width: 65px; height: 65px; }
       }
-      .user__info {
+      #user__info {
         display: flex;
         flex-flow: column;
         justify-content: center;

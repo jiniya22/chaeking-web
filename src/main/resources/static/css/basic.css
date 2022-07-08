@@ -159,25 +159,23 @@ body {
       display: flex;
       width: 100%;
       height: 65px; }
-      body .d__content .d__profile #user__image {
-        margin-right: 10px; }
-        body .d__content .d__profile #user__image img {
-          width: 65px;
-          height: 65px; }
-      body .d__content .d__profile .user__info {
+      body .d__content .d__profile #user__image img {
+        width: 65px;
+        height: 65px; }
+      body .d__content .d__profile #user__info {
         display: flex;
         flex-flow: column;
         justify-content: center; }
-        body .d__content .d__profile .user__info .user__name {
+        body .d__content .d__profile #user__info .user__name {
           display: flex;
           align-items: center;
           font-weight: 600; }
-          body .d__content .d__profile .user__info .user__name:after {
+          body .d__content .d__profile #user__info .user__name:after {
             font-size: .8em;
             padding: 0 5px;
             content: '\F285';
             font-family: bootstrap-icons, Pretendard, sans-serif !important; }
-        body .d__content .d__profile .user__info .user__email {
+        body .d__content .d__profile #user__info .user__email {
           font-size: smaller; }
 
 /*# sourceMappingURL=basic.css.map */
