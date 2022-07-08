@@ -28,18 +28,16 @@
 </div>
 <th:block th:insert="fragment/footer :: f-basic"></th:block>
 <script>
-  window.onload = function() {
-    const $menu_1 = document.getElementById("menu_1");
-    const $menu_3 = document.getElementById("menu_3");
-    $menu_1.onclick = () => {
-        if(!$menu_1.classList.contains('active'))
-          location.href = "[[@{/test}]]";
-    }
-    $menu_3.onclick = () => {
-      if(!$menu_3.classList.contains('active'))
-        location.href = "[[@{/books}]]";
-    }
-  };
+  const $menu_1 = document.getElementById("menu_1");
+  const $menu_3 = document.getElementById("menu_3");
+  $menu_1.onclick = () => {
+    if(!$menu_1.classList.contains('active'))
+      location.href = "[[@{/test}]]";
+  }
+  $menu_3.onclick = () => {
+    if(!$menu_3.classList.contains('active'))
+      location.href = "[[@{/books}]]";
+  }
 </script>
 <th:block layout:fragment="f-script"></th:block>
 </body>
