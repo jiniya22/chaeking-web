@@ -5,18 +5,15 @@
 
 <th:block layout:fragment="f-title">책 검색</th:block>
 <th:block layout:fragment="f-head-content">
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Dropdown</button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-        </div>
-        <input type="text" class="form-control" aria-label="Text input with dropdown button">
+    <div class="d__search input-group">
+        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">전체</button>
+        <ul class="dropdown-menu">
+            <li><span class="dropdown-item" data-name="title">제목</span></li>
+            <li><span class="dropdown-item" data-name="person">작가</span></li>
+            <li><span class="dropdown-item" data-name="publisher">출판사</span></li>
+            <li><span class="dropdown-item" data-name="isbn">ISBN</span></li>
+        </ul>
+        <input type="text" class="form-control" name="query" placeholder="검색어를 입력하세요">
     </div>
 </th:block>
 
@@ -29,3 +26,16 @@
         </div>
     </div>
 </section>
+
+<th:block layout:fragment="f-script">
+    <script>
+        window.onload = function() {
+            const $items = document.getElementsByClassName('dropdown-item');
+            [].forEach.call(Array.from($items), $item => {
+                $item.addEventListener('click', e => {
+                    closest($item, '.dropdown-menu').previousElementSibling.textContent = $item.textContent;
+                });
+            });
+        };
+    </script>
+</th:block>

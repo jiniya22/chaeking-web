@@ -3,13 +3,7 @@
 }
 body {
   overflow-y: hidden;
-  .i__at-solid {
-    background-image: url('../img/icon/at-solid.svg');
-    background-size: cover;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-  }
+
   .d__container {
     font-size: 12pt;
     color: var(--bs-gray-500);
@@ -32,7 +26,32 @@ body {
       display: flex;
       align-items: center;
       height: 70px;
-      padding: 0 20px;
+
+      #btn__back {
+        background-image: url(../img/back.png);
+        background-size: contain;
+        width: 14px;
+        height: 20px;
+        cursor: pointer;
+        margin: 0 15px;
+        background-repeat: no-repeat;
+      }
+      .d__search {
+        padding-right: 20px;
+        button, input, span {
+          font-size: .88em;
+        }
+        button {
+          min-width: 77px;
+        }
+        input {
+          border: transparent;
+          border-bottom: 1px solid var(--bs-gray-600);
+        }
+        .dropdown-toggle::after {
+          margin-left: 5px;
+        }
+      }
     }
     .s__basic {
       display: flex;
@@ -83,14 +102,6 @@ body {
       width: 70px;
       height: 70px;
     }
-  }
-
-  #btn__back {
-    background-image: url(../img/back.png);
-    background-size: contain;
-    width: 12px;
-    height: 20px;
-    cursor: pointer;
   }
 
   .d__content {
