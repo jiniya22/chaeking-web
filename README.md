@@ -8,7 +8,7 @@ Chaeking Website with Spring Boot 2
     <img src="https://img.shields.io/static/v1?label=OpenJDK&message=17.0.2&color=007396&logo=java">
     <img src="https://img.shields.io/static/v1?label=Spring%20Boot&message=2.7.1&color=6DB33F&logo=springboot&logoColor=fff">
     <img src="https://img.shields.io/static/v1?label=Thymeleaf&message=3.0.15.RELEASE&color=005F0F&logo=Thymeleaf&logoColor=fff">
-    <img src="https://img.shields.io/static/v1?label=Bootstrap&message=4.6.1&color=7952B3&logo=Bootstrap&logoColor=fff">
+    <img src="https://img.shields.io/static/v1?label=Bootstrap&message=5.1.3&color=7952B3&logo=Bootstrap&logoColor=fff">
     <img src="https://img.shields.io/static/v1?label=Apache%20Maven&message=3.10.1&color=C71A36&logo=ApacheMaven">
 </p>
 
@@ -24,4 +24,5 @@ Chaeking Website with Spring Boot 2
 - View Template
   - Thymeleaf
   - Thymeleaf Page Layouts
-- BootStrap 4
+- BootStrap 5
+- SCSS

@@ -1,0 +1,134 @@
+:root {
+  --w: 360px;
+  --line-basic: #e5e5e5;
+  --line-normal: #6c757d;
+}
+body {
+  overflow-y: hidden;
+
+  .d__container {
+    font-size: 12pt;
+    color: var(--line-normal);
+    width: var(--w);
+    height: calc(var(--vh, 1vh) * 100); /* 568px; */
+    margin: 0 auto;
+    border: 1px solid var(--line-basic);
+    overflow-y: hidden;
+    font-family: Pretendard, 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, Dotum, Gulim, Helvetica, Sans-serif;
+    div {
+      font-size: 1em;
+    }
+    i {
+      margin: 0 5px;
+    }
+    .col-12 {
+      padding: 0 !important;
+    }
+    .h__basic {
+      display: flex;
+      align-items: center;
+      height: 70px;
+      padding: 0 20px;
+    }
+    .s__basic {
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+      height: calc(100% - 70px);
+    }
+    .s__chaeking {
+      height: calc(100% - 115px);
+    }
+  }
+
+  .f__basic {
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid var(--line-basic);
+    .d__menu {
+      width: 25px;
+      height: 25px;
+      background-size: contain;
+      margin: 10px;
+      cursor: pointer;
+      #menu_1 { background-image: url('../img/menu/menu_1_inactive.png'); }
+      #menu_2 { background-image: url('../img/menu/menu_2_inactive.png'); }
+      #menu_3 { background-image: url('../img/menu/menu_3_inactive.png'); }
+      #menu_4 { background-image: url('../img/menu/menu_4_inactive.png'); }
+      #menu_1.active { background-image: url('../img/menu/menu_1_active.png'); }
+      #menu_2.active { background-image: url('../img/menu/menu_2_active.png'); }
+      #menu_3.active { background-image: url('../img/menu/menu_3_active.png'); }
+      #menu_4.active { background-image: url('../img/menu/menu_4_active.png'); }
+    }
+  }
+
+  .d__home {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    max-height: calc(100vh - 180px);
+    vertical-align: middle;
+    .d__logo {
+      /* 선반 아이콘  제작자: Freepik - Flaticon*/
+      background-image: url(../img/book.png);
+      background-size: contain;
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  #btn__back {
+    background-image: url(../img/back.png);
+    background-size: contain;
+    width: 12px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .d__content {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 20px;
+    button {
+      margin: 10px;
+      border: 2px solid var(--line-normal);
+      color: var(--line-normal);
+    }
+    .a__join {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      color: #6c757d;
+      font-size: .8em;
+      cursor: pointer;
+      padding: 2px;
+      &:hover {
+        color: #393c3e
+      }
+    }
+    .d__input_group {
+      width: 100%;
+      .d__input {
+        width: 100%;
+        margin: 10px 0;
+        & > label {
+          font-size: .85em;
+          margin: 3px 0;
+        }
+        .btn-group label {
+          font-size: .95em;
+        }
+      }
+    }
+  }
+}
+
+
