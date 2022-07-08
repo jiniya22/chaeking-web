@@ -13,7 +13,7 @@
             <li><span class="dropdown-item" data-name="publisher">출판사</span></li>
             <li><span class="dropdown-item" data-name="isbn">ISBN</span></li>
         </ul>
-        <input type="text" class="form-control" name="query" placeholder="검색어를 입력하세요" autocomplete="false">
+        <input type="text" class="form-control" name="query" placeholder="검색어를 입력하세요" autocomplete="false" aria-label="query">
     </div>
     <i class="bi bi-search" id="i__search"></i>
 </th:block>
@@ -29,28 +29,28 @@
             const $items = document.getElementsByClassName('dropdown-item');
             const $i__search = document.getElementById('i__search');
             [].forEach.call(Array.from($items), $item => {
-                $item.addEventListener('click', e => {
+                $item.addEventListener('click', () => {
                     closest($item, '.dropdown-menu').previousElementSibling.textContent = $item.textContent;
                 });
             });
             $i__search.onclick = () => {
-                axios.get('http://localhost:8080/temp/books?query=%EC%82%AC%EB%9E%91&target=title&sort=accuracy&page=0&size=10')
+                axios.get(fn_get_chaeking_api_url() + '/temp/books?query=%EC%82%AC%EB%9E%91&target=title&sort=accuracy&page=0&size=10')
                     .then(res => res.data.data)
                     .then(data => {
                         let $new_elements = _go(data, _map(m =>
-`<div class="d__book_simple" data-book-id="${m.id}">
+`<div class="d__book_simple" data-book-id="${m['id']}">
     <div class="d__book_image">
-        <img src="${m.image_url}" alt="${m.name}">
+        <img src="${m['image_url']}" alt="${m['name']}">
     </div>
     <div class="d__book_content">
-        <div class="d__book_title">${m.name}</div>
+        <div class="d__book_title">${m['name']}</div>
         <div>
-            <span class="d__author">${m.authors}</span>
-            <span class="d__publisher">${m.publisher}</span>
+            <span class="d__author">${m['authors']}</span>
+            <span class="d__publisher">${m['publisher']}</span>
         </div>
     </div>
 </div>`));
-                        document.querySelector('.d__content').innerHTML = $new_elements.join('\n');;
+                        document.querySelector('.d__content').innerHTML = $new_elements.join('\n');
                 });
             }
         };

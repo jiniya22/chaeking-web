@@ -36,3 +36,11 @@ function parentsUntil(el, selector, filter) {
     }
     return result;
 }
+
+function fn_get_chaeking_api_url() {
+    let chaeking_url = 'https://api.chaeking.co.kr';
+    if('localhost' === document.domain) {
+        chaeking_url = 'http://localhost:8080';
+    }
+    return chaeking_url;
+}
