@@ -1,147 +1,122 @@
 @charset "UTF-8";
 :root {
-  --w: 360px;
-  --line-basic: #e5e5e5;
-  --line-normal: #6c757d;
-}
+  --w: 360px; }
 
 body {
-  overflow-y: hidden;
-}
-body .d__container {
-  font-size: 12pt;
-  color: var(--line-normal);
-  width: var(--w);
-  height: calc(var(--vh, 1vh) * 100); /* 568px; */
-  margin: 0 auto;
-  border: 1px solid var(--line-basic);
-  overflow-y: hidden;
-  font-family: Pretendard, "Noto Sans KR", -apple-system, BlinkMacSystemFont, system-ui, Dotum, Gulim, Helvetica, Sans-serif;
-}
-body .d__container div {
-  font-size: 1em;
-}
-body .d__container i {
-  margin: 0 5px;
-}
-body .d__container .col-12 {
-  padding: 0 !important;
-}
-body .d__container .h__basic {
-  display: flex;
-  align-items: center;
-  height: 70px;
-  padding: 0 20px;
-}
-body .d__container .s__basic {
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  height: calc(100% - 70px);
-}
-body .d__container .s__chaeking {
-  height: calc(100% - 115px);
-}
-body .f__basic {
-  height: 45px;
-  display: flex;
-  justify-content: space-around;
-  border-top: 1px solid var(--line-basic);
-}
-body .f__basic .d__menu {
-  width: 25px;
-  height: 25px;
-  background-size: contain;
-  margin: 10px;
-  cursor: pointer;
-}
-body .f__basic .d__menu #menu_1 {
-  background-image: url("../img/menu/menu_1_inactive.png");
-}
-body .f__basic .d__menu #menu_2 {
-  background-image: url("../img/menu/menu_2_inactive.png");
-}
-body .f__basic .d__menu #menu_3 {
-  background-image: url("../img/menu/menu_3_inactive.png");
-}
-body .f__basic .d__menu #menu_4 {
-  background-image: url("../img/menu/menu_4_inactive.png");
-}
-body .f__basic .d__menu #menu_1.active {
-  background-image: url("../img/menu/menu_1_active.png");
-}
-body .f__basic .d__menu #menu_2.active {
-  background-image: url("../img/menu/menu_2_active.png");
-}
-body .f__basic .d__menu #menu_3.active {
-  background-image: url("../img/menu/menu_3_active.png");
-}
-body .f__basic .d__menu #menu_4.active {
-  background-image: url("../img/menu/menu_4_active.png");
-}
-body .d__home {
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60%;
-  max-height: calc(100vh - 180px);
-  vertical-align: middle;
-}
-body .d__home .d__logo {
-  /* 선반 아이콘  제작자: Freepik - Flaticon*/
-  background-image: url(../img/book.png);
-  background-size: contain;
-  width: 70px;
-  height: 70px;
-}
-body #btn__back {
-  background-image: url(../img/back.png);
-  background-size: contain;
-  width: 12px;
-  height: 20px;
-  cursor: pointer;
-}
-body .d__content {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  padding: 20px;
-}
-body .d__content button {
-  margin: 10px;
-  border: 2px solid var(--line-normal);
-  color: var(--line-normal);
-}
-body .d__content .a__join {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  color: #6c757d;
-  font-size: 0.8em;
-  cursor: pointer;
-  padding: 2px;
-}
-body .d__content .a__join:hover {
-  color: #393c3e;
-}
-body .d__content .d__input_group {
-  width: 100%;
-}
-body .d__content .d__input_group .d__input {
-  width: 100%;
-  margin: 10px 0;
-}
-body .d__content .d__input_group .d__input > label {
-  font-size: 0.85em;
-  margin: 3px 0;
-}
-body .d__content .d__input_group .d__input .btn-group label {
-  font-size: 0.95em;
-}
+  overflow-y: hidden; }
+  body .i__at-solid {
+    background-image: url("../img/icon/at-solid.svg");
+    background-size: cover;
+    display: inline-block;
+    width: 16px;
+    height: 16px; }
+  body .d__container {
+    font-size: 12pt;
+    color: var(--bs-gray-500);
+    width: var(--w);
+    height: calc(var(--vh, 1vh) * 100);
+    /* 568px; */
+    margin: 0 auto;
+    border: 1px solid var(--bs-gray-100);
+    overflow-y: hidden;
+    font-family: Pretendard, 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, Dotum, Gulim, Helvetica, Sans-serif; }
+    body .d__container div {
+      font-size: 1em; }
+    body .d__container i {
+      margin: 0 5px; }
+    body .d__container .col-12 {
+      padding: 0 !important; }
+    body .d__container .h__basic {
+      display: flex;
+      align-items: center;
+      height: 70px;
+      padding: 0 20px; }
+    body .d__container .s__basic {
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+      height: calc(100% - 70px); }
+    body .d__container .s__chaeking {
+      height: calc(100% - 115px); }
+  body .f__basic {
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid var(--bs-gray-300); }
+    body .f__basic .d__menu {
+      width: 25px;
+      height: 25px;
+      background-size: contain;
+      margin: 10px;
+      cursor: pointer; }
+    body .f__basic #menu_1 {
+      background-image: url("../img/menu/menu_1_inactive.png"); }
+    body .f__basic #menu_2 {
+      background-image: url("../img/menu/menu_2_inactive.png"); }
+    body .f__basic #menu_3 {
+      background-image: url("../img/menu/menu_3_inactive.png"); }
+    body .f__basic #menu_4 {
+      background-image: url("../img/menu/menu_4_inactive.png"); }
+    body .f__basic #menu_1.active {
+      background-image: url("../img/menu/menu_1_active.png"); }
+    body .f__basic #menu_2.active {
+      background-image: url("../img/menu/menu_2_active.png"); }
+    body .f__basic #menu_3.active {
+      background-image: url("../img/menu/menu_3_active.png"); }
+    body .f__basic #menu_4.active {
+      background-image: url("../img/menu/menu_4_active.png"); }
+  body .d__home {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    max-height: calc(100vh - 180px);
+    vertical-align: middle; }
+    body .d__home .d__logo {
+      /* 선반 아이콘  제작자: Freepik - Flaticon*/
+      background-image: url(../img/book.png);
+      background-size: contain;
+      width: 70px;
+      height: 70px; }
+  body #btn__back {
+    background-image: url(../img/back.png);
+    background-size: contain;
+    width: 12px;
+    height: 20px;
+    cursor: pointer; }
+  body .d__content {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 20px; }
+    body .d__content button {
+      margin: 10px;
+      border: 2px solid var(--bs-gray-500);
+      color: var(--bs-gray-500); }
+    body .d__content .a__join {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      color: #6c757d;
+      font-size: .8em;
+      cursor: pointer;
+      padding: 2px; }
+      body .d__content .a__join:hover {
+        color: #393c3e; }
+    body .d__content .d__input_group {
+      width: 100%; }
+      body .d__content .d__input_group .d__input {
+        width: 100%;
+        margin: 10px 0; }
+        body .d__content .d__input_group .d__input > label {
+          font-size: .85em;
+          margin: 3px 0; }
+        body .d__content .d__input_group .d__input .btn-group label {
+          font-size: .95em; }
 
 /*# sourceMappingURL=basic.css.map */

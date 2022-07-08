@@ -1,18 +1,22 @@
 :root {
   --w: 360px;
-  --line-basic: #e5e5e5;
-  --line-normal: #6c757d;
 }
 body {
   overflow-y: hidden;
-
+  .i__at-solid {
+    background-image: url('../img/icon/at-solid.svg');
+    background-size: cover;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+  }
   .d__container {
     font-size: 12pt;
-    color: var(--line-normal);
+    color: var(--bs-gray-500);
     width: var(--w);
     height: calc(var(--vh, 1vh) * 100); /* 568px; */
     margin: 0 auto;
-    border: 1px solid var(--line-basic);
+    border: 1px solid var(--bs-gray-100);
     overflow-y: hidden;
     font-family: Pretendard, 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, Dotum, Gulim, Helvetica, Sans-serif;
     div {
@@ -45,22 +49,22 @@ body {
     height: 45px;
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid var(--line-basic);
+    border-top: 1px solid var(--bs-gray-300);
     .d__menu {
       width: 25px;
       height: 25px;
       background-size: contain;
       margin: 10px;
       cursor: pointer;
-      #menu_1 { background-image: url('../img/menu/menu_1_inactive.png'); }
-      #menu_2 { background-image: url('../img/menu/menu_2_inactive.png'); }
-      #menu_3 { background-image: url('../img/menu/menu_3_inactive.png'); }
-      #menu_4 { background-image: url('../img/menu/menu_4_inactive.png'); }
-      #menu_1.active { background-image: url('../img/menu/menu_1_active.png'); }
-      #menu_2.active { background-image: url('../img/menu/menu_2_active.png'); }
-      #menu_3.active { background-image: url('../img/menu/menu_3_active.png'); }
-      #menu_4.active { background-image: url('../img/menu/menu_4_active.png'); }
     }
+    #menu_1 { background-image: url('../img/menu/menu_1_inactive.png'); }
+    #menu_2 { background-image: url('../img/menu/menu_2_inactive.png'); }
+    #menu_3 { background-image: url('../img/menu/menu_3_inactive.png'); }
+    #menu_4 { background-image: url('../img/menu/menu_4_inactive.png'); }
+    #menu_1.active { background-image: url('../img/menu/menu_1_active.png'); }
+    #menu_2.active { background-image: url('../img/menu/menu_2_active.png'); }
+    #menu_3.active { background-image: url('../img/menu/menu_3_active.png'); }
+    #menu_4.active { background-image: url('../img/menu/menu_4_active.png'); }
   }
 
   .d__home {
@@ -100,8 +104,8 @@ body {
     padding: 20px;
     button {
       margin: 10px;
-      border: 2px solid var(--line-normal);
-      color: var(--line-normal);
+      border: 2px solid var(--bs-gray-500);
+      color: var(--bs-gray-500);
     }
     .a__join {
       text-decoration: underline;
