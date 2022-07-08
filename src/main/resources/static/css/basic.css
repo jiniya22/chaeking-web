@@ -6,7 +6,7 @@ body {
   overflow-y: hidden; }
   body .d__container {
     font-size: 12pt;
-    color: var(--bs-gray-500);
+    color: var(--bs-gray-700);
     width: var(--w);
     height: calc(var(--vh, 1vh) * 100);
     /* 568px; */
@@ -32,17 +32,18 @@ body {
         cursor: pointer;
         margin: 0 15px;
         background-repeat: no-repeat; }
-      body .d__container .h__basic .d__search {
-        padding-right: 20px; }
-        body .d__container .h__basic .d__search button, body .d__container .h__basic .d__search input, body .d__container .h__basic .d__search span {
-          font-size: .88em; }
-        body .d__container .h__basic .d__search button {
-          min-width: 77px; }
-        body .d__container .h__basic .d__search input {
-          border: transparent;
-          border-bottom: 1px solid var(--bs-gray-600); }
-        body .d__container .h__basic .d__search .dropdown-toggle::after {
-          margin-left: 5px; }
+      body .d__container .h__basic .d__search button, body .d__container .h__basic .d__search input, body .d__container .h__basic .d__search span {
+        font-size: .88em; }
+      body .d__container .h__basic .d__search button {
+        min-width: 77px; }
+      body .d__container .h__basic .d__search input {
+        border: transparent;
+        border-bottom: 1px solid var(--bs-gray-600);
+        border-radius: 0; }
+      body .d__container .h__basic .d__search .dropdown-toggle::after {
+        margin-left: 5px; }
+      body .d__container .h__basic #i__search {
+        padding: 0 10px; }
     body .d__container .s__basic {
       display: flex;
       flex-flow: column;
@@ -50,6 +51,8 @@ body {
       height: calc(100% - 70px); }
     body .d__container .s__chaeking {
       height: calc(100% - 115px); }
+      body .d__container .s__chaeking.scroll__overlay {
+        overflow-y: auto; }
   body .f__basic {
     height: 45px;
     display: flex;
@@ -124,5 +127,31 @@ body {
           margin: 3px 0; }
         body .d__content .d__input_group .d__input .btn-group label {
           font-size: .95em; }
+    body .d__content .d__book_simple {
+      display: flex;
+      flex-flow: row;
+      align-self: flex-start;
+      height: 65px;
+      font-size: .8em;
+      margin: 5px 0; }
+      body .d__content .d__book_simple .d__book_image {
+        display: flex;
+        justify-content: center;
+        width: 65px;
+        height: 65px;
+        flex-grow: 1; }
+        body .d__content .d__book_simple .d__book_image img {
+          width: auto;
+          height: 65px; }
+      body .d__content .d__book_simple .d__book_content {
+        width: calc(100% - 65px);
+        margin-left: 10px;
+        flex-grow: 2; }
+        body .d__content .d__book_simple .d__book_content .d__book_title {
+          margin-bottom: 2px; }
+        body .d__content .d__book_simple .d__book_content .d__author {
+          margin-right: 5px; }
+          body .d__content .d__book_simple .d__book_content .d__author:after {
+            content: " 저"; }
 
 /*# sourceMappingURL=basic.css.map */

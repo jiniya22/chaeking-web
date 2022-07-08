@@ -6,7 +6,7 @@ body {
 
   .d__container {
     font-size: 12pt;
-    color: var(--bs-gray-500);
+    color: var(--bs-gray-700);
     width: var(--w);
     height: calc(var(--vh, 1vh) * 100); /* 568px; */
     margin: 0 auto;
@@ -37,7 +37,6 @@ body {
         background-repeat: no-repeat;
       }
       .d__search {
-        padding-right: 20px;
         button, input, span {
           font-size: .88em;
         }
@@ -47,10 +46,14 @@ body {
         input {
           border: transparent;
           border-bottom: 1px solid var(--bs-gray-600);
+          border-radius: 0;
         }
         .dropdown-toggle::after {
           margin-left: 5px;
         }
+      }
+      #i__search {
+        padding: 0 10px;
       }
     }
     .s__basic {
@@ -61,6 +64,9 @@ body {
     }
     .s__chaeking {
       height: calc(100% - 115px);
+      &.scroll__overlay {
+        overflow-y: auto;
+      }
     }
   }
 
@@ -142,6 +148,40 @@ body {
           font-size: .95em;
         }
       }
+    }
+    .d__book_simple {
+      display: flex;
+      flex-flow: row;
+      align-self: flex-start;
+      height: 65px;
+      font-size: .8em;
+      margin: 5px 0;
+      .d__book_image {
+        display: flex;
+        justify-content: center;
+        width: 65px;
+        height: 65px;
+        flex-grow: 1;
+        img {
+          width: auto;
+          height: 65px;
+        }
+      }
+      .d__book_content {
+        width: calc(100% - 65px);
+        margin-left: 10px;
+        flex-grow: 2;
+        .d__book_title {
+          margin-bottom: 2px;
+        }
+        .d__author {
+          margin-right: 5px;
+          &:after {
+            content: ' 저'
+          }
+        }
+      }
+
     }
   }
 }
