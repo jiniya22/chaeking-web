@@ -44,7 +44,7 @@ body {
         border-radius: 0; }
       body .d__container .h__basic .d__search .dropdown-toggle::after {
         margin-left: 5px; }
-      body .d__container .h__basic #i__search, body .d__container .h__basic #i__more {
+      body .d__container .h__basic #i__search, body .d__container .h__basic #i__system_setting {
         padding: 0 10px; }
     body .d__container .s__basic {
       display: flex;
@@ -105,19 +105,21 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    padding: 20px; }
+    padding: 0 20px 20px 20px; }
+    body .d__content.pdt-20 {
+      padding-top: 20px; }
     body .d__content button {
       margin: 10px;
       border: 2px solid var(--bs-gray-500);
       color: var(--bs-gray-500); }
-    body .d__content .a__join {
+    body .d__content .a__small {
       text-decoration: underline;
       text-underline-offset: 2px;
       color: #6c757d;
       font-size: .8em;
       cursor: pointer;
       padding: 2px; }
-      body .d__content .a__join:hover {
+      body .d__content .a__small:hover {
         color: #393c3e; }
     body .d__content .d__input_group {
       width: 100%; }
@@ -165,7 +167,8 @@ body {
       body .d__content .d__profile #user__info {
         display: flex;
         flex-flow: column;
-        justify-content: center; }
+        justify-content: center;
+        margin-bottom: 30px; }
         body .d__content .d__profile #user__info .user__name {
           display: flex;
           align-items: center;
@@ -177,5 +180,42 @@ body {
             font-family: bootstrap-icons, Pretendard, sans-serif !important; }
         body .d__content .d__profile #user__info .user__email {
           font-size: smaller; }
+    body .d__content .d__management {
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+      color: var(--bs-gray-dark);
+      font-weight: 600;
+      margin-bottom: 20px;
+      cursor: pointer; }
+      body .d__content .d__management .title {
+        margin: 10px 0; }
+      body .d__content .d__management .more, body .d__content .d__management .plus {
+        margin: 5px 20px; }
+    body .d__content .d__system {
+      margin-bottom: 20px;
+      width: 100%;
+      color: var(--bs-gray-dark);
+      font-weight: 600;
+      cursor: pointer; }
+      body .d__content .d__system .more, body .d__content .d__system .plus {
+        margin: 10px 20px; }
+    body .d__content .more {
+      justify-content: space-between;
+      display: flex;
+      font-size: .9em; }
+      body .d__content .more:after {
+        font-size: .8em;
+        color: #000000;
+        padding: 0 5px;
+        content: '\F285';
+        font-family: bootstrap-icons, Pretendard, sans-serif !important; }
+    body .d__content .plus {
+      display: flex;
+      flex-flow: column;
+      font-weight: 600;
+      font-size: .9em; }
+      body .d__content .plus.ml-zero {
+        margin-left: 0; }
 
 /*# sourceMappingURL=basic.css.map */

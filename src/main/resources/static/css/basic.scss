@@ -47,7 +47,7 @@ body {
           margin-left: 5px;
         }
       }
-      #i__search, #i__more {
+      #i__search, #i__system_setting {
         padding: 0 10px;
       }
     }
@@ -113,13 +113,16 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
+    &.pdt-20 {
+      padding-top: 20px;
+    }
     button {
       margin: 10px;
       border: 2px solid var(--bs-gray-500);
       color: var(--bs-gray-500);
     }
-    .a__join {
+    .a__small {
       text-decoration: underline;
       text-underline-offset: 2px;
       color: #6c757d;
@@ -189,6 +192,7 @@ body {
         display: flex;
         flex-flow: column;
         justify-content: center;
+        margin-bottom: 30px;
         .user__name {
           display: flex;
           align-items: center;
@@ -203,6 +207,52 @@ body {
         .user__email {
           font-size: smaller;
         }
+      }
+    }
+    .d__management {
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+      color: var(--bs-gray-dark);
+      font-weight: 600;
+      margin-bottom: 20px;
+      cursor: pointer;
+      .title {
+        margin: 10px 0;
+      }
+      .more, .plus {
+        margin: 5px 20px;
+      }
+    }
+    .d__system {
+      margin-bottom: 20px;
+      width: 100%;
+      color: var(--bs-gray-dark);
+      font-weight: 600;
+      cursor: pointer;
+      .more, .plus {
+        margin: 10px 20px;
+      }
+    }
+    .more {
+      justify-content: space-between;
+      display: flex;
+      font-size: .9em;
+      &:after {
+        font-size: .8em;
+        color: #000000;
+        padding: 0 5px;
+        content: '\F285';
+        font-family: bootstrap-icons, Pretendard, sans-serif !important;
+      }
+    }
+    .plus {
+      display: flex;
+      flex-flow: column;
+      font-weight: 600;
+      font-size: .9em;
+      &.ml-zero {
+        margin-left: 0;
       }
     }
   }

@@ -7,5 +7,27 @@
 
 <section layout:fragment="f-content" class="s__chaeking scroll__overlay">
     <div class="d__content">
+        <div class="d__management">
+            <div class="title">계정 관리</div>
+            <div class="more">이메일 변경</div>
+            <div class="more">닉네임 변경</div>
+            <div class="more">비밀번호 변경</div>
+        </div>
+        <div class="d__management">
+            <div class="title">설정</div>
+            <div class="plus">잠금 설정</div>
+            <div class="plus">푸시 설정</div>
+        </div>
+        <div class="d__system">
+            <div id="a__logout" class="plus ml-zero">로그아웃</div>
+        </div>
     </div>
 </section>
+
+<th:block layout:fragment="f-script">
+    <script>
+        window.onload = function() {
+            document.getElementById("a__logout").onclick = () => location.href = "[[@{/}]]"; // 임시설정
+        };
+    </script>
+</th:block>

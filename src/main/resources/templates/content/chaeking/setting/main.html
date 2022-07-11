@@ -6,7 +6,7 @@
 <th:block layout:fragment="f-title">책킹 - 설정</th:block>
 
 <header class="h__basic fd__row_reverse" layout:fragment="f-head">
-    <i id="i__more" class="bi bi-three-dots"></i>
+    <i id="i__system_setting" class="bi bi-three-dots btn"></i>
 </header>
 <section layout:fragment="f-content">
     <div class="d__content">
@@ -19,12 +19,21 @@
                 <div class="user__email">sol@applebox.xyz</div>
             </div>
         </div>
+        <hr>
+        <div class="d__management">
+            <div class="title">📚 도서 관리</div>
+            <div class="more">이미 읽은 책</div>
+            <div class="more">읽고 싶은 책</div>
+        </div>
     </div>
 </section>
 
 <th:block layout:fragment="f-script">
     <script>
         const $user_info = document.getElementById("user__info");
+        const $system_setting = document.getElementById("i__system_setting");
+
         $user_info.onclick = () => location.href = "[[@{/setting/user}]]";
+        $system_setting.onclick = () => location.href = "[[@{/setting/system}]]";
     </script>
 </th:block>
