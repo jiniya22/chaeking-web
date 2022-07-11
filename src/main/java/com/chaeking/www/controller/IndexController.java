@@ -28,4 +28,8 @@ public class IndexController {
         return "success";
     }
 
+    @GetMapping("/swagger-ui.html")
+    public String temp() {
+        return "redirect:/";
+    }
 }

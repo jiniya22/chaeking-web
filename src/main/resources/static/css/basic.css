@@ -50,9 +50,9 @@ body {
       display: flex;
       flex-flow: column;
       width: 100%;
-      height: calc(100% - 70px); }
+      height: calc(var(--vh, 1vh) * 100 - 70px); }
     body .d__container .s__chaeking {
-      height: calc(100% - 115px); }
+      height: calc(var(--vh, 1vh) * 100 - 115px); }
       body .d__container .s__chaeking.scroll__overlay {
         overflow-y: auto; }
   body .f__basic {
@@ -89,7 +89,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 60%;
-    max-height: calc(100vh - 180px);
+    max-height: calc(var(--vh, 1vh) * 100 - 180px);
     vertical-align: middle; }
     body .d__home .d__logo {
       /* 선반 아이콘  제작자: Freepik - Flaticon*/
