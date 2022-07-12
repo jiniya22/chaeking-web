@@ -16,14 +16,39 @@
             이메일로 로그인하기
         </button>
         <a class="a__small" th:href="@{/join}">회원가입</a>
-        <a class="a__small" th:href="@{/test}">테스트</a>
+        <div class="a__small" id="a__test">테스트</div>
     </div>
 </section>
 
 <th:block layout:fragment="f-script">
     <script>
-        window.onload = function() {
-            document.getElementById("btn__login").onclick = () => location.href = "[[@{/login}]]";
+        const temp_user_info = {
+            "email": "sol@applebox.xyz",
+            "password": "3wqPrWol1T3h/3U+w2abGw==",
+            "secret_key": "A37aXdxH6gwTySajLe8eZWNvyC2yuZVB"
         };
+        document.getElementById("btn__login").onclick = () => location.href = "[[@{/login}]]";
+        document.getElementById("a__test").onclick = () =>
+            axios.post(fn_get_chaeking_api_url() + '/v1/auth/login', temp_user_info)
+                .then(res => res.data.data)
+                .then(data => {
+                    const $form = document.createElement("form");
+                    $form.setAttribute("method","post");
+                    $form.setAttribute("action","/test");
+                    document.body.appendChild($form)
+
+                    const $access_token = document.createElement("input");
+                    $access_token.setAttribute("type","hidden");
+                    $access_token.setAttribute("name","access_token");
+                    $access_token.setAttribute("value", data['access_token']);
+                    $form.appendChild($access_token);
+
+                    const $refresh_token = document.createElement("input");
+                    $refresh_token.setAttribute("type","hidden");
+                    $refresh_token.setAttribute("name","refresh_token");
+                    $refresh_token.setAttribute("value", data['refresh_token']);
+                    $form.appendChild($refresh_token);
+                    $form.submit();
+            });
     </script>
 </th:block>
