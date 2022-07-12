@@ -18,6 +18,9 @@
         <a class="a__small" th:href="@{/join}">회원가입</a>
         <div class="a__small" id="a__test">테스트</div>
     </div>
+    <div class="spinner-border text-secondary d__spinner d__hidden" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
 </section>
 
 <th:block layout:fragment="f-script">
@@ -29,7 +32,8 @@
         };
         document.getElementById("btn__login").onclick = () => location.href = "[[@{/login}]]";
         document.getElementById("a__test").onclick = () =>
-            axios.post(fn_get_chaeking_api_url() + '/v1/auth/login', temp_user_info)
+            document.querySelector('.d__spinner').classList.remove('d__hidden');
+            axios.post(fn_get_chaeking_api_url() + '/v1/auth/token', temp_user_info)
                 .then(res => res.data.data)
                 .then(data => {
                     const $form = document.createElement("form");
@@ -49,6 +53,11 @@
                     $refresh_token.setAttribute("value", data['refresh_token']);
                     $form.appendChild($refresh_token);
                     $form.submit();
-            });
+                })
+                .catch(e => {
+                    document.querySelector('.d__spinner').classList.add('d__hidden');
+                    if(e['message'] === 'Network Error')
+                        alert('API 서버가 유효하지 않습니다.')
+                });
     </script>
 </th:block>

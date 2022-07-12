@@ -5,6 +5,8 @@
 body {
   overflow-y: hidden; }
   body .d__container {
+    display: flex;
+    flex-direction: column;
     font-size: 12pt;
     color: var(--bs-gray-700);
     width: var(--w);
@@ -22,6 +24,12 @@ body {
       padding: 0 !important; }
     body .d__container .fd__row_reverse {
       flex-direction: row-reverse; }
+    body .d__container .d__hidden {
+      display: none; }
+    body .d__container .d__spinner {
+      position: fixed;
+      top: calc(var(--vh, 1vh) * 50 - 16px);
+      left: calc(50% - 16px); }
     body .d__container .h__basic {
       display: flex;
       align-items: center;
@@ -49,6 +57,7 @@ body {
     body .d__container .s__basic {
       display: flex;
       flex-flow: column;
+      flex-grow: 2;
       width: 100%;
       height: calc(var(--vh, 1vh) * 100 - 70px); }
     body .d__container .s__chaeking {
@@ -59,7 +68,7 @@ body {
     height: 45px;
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid var(--bs-gray-300); }
+    border-top: 1px solid var(--bs-gray-100); }
     body .f__basic .d__menu {
       width: 25px;
       height: 25px;
