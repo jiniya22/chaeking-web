@@ -7,8 +7,8 @@
     <th:block layout:fragment="f-title">책킹</th:block>
   </title>
   <th:block th:insert="fragment/header :: f-basic"></th:block>
-  <meta th:name="_access_token" th:content="${token.access_token}"/>
-  <meta th:name="_refresh_token" th:content="${token.refresh_token}"/>
+  <meta th:name="_access_token" th:content="${token?.access_token}"/>
+  <meta th:name="_refresh_token" th:content="${token?.refresh_token}"/>
   <th:block layout:fragment="f-header"></th:block>
   <style>
 
