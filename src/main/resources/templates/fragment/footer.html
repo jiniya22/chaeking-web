@@ -14,8 +14,8 @@
             document.documentElement.style.setProperty('--vh', `${vh}px`);
         };
 
-        window.onload = function() {
-            set_screen_size();
+        set_screen_size();
+        window.onload = () => {
             if($btn_back) {
                 $btn_back.onclick = () => location.href = document.referrer;
             }

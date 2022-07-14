@@ -31,7 +31,7 @@
             "secret_key": "A37aXdxH6gwTySajLe8eZWNvyC2yuZVB"
         };
         document.getElementById("btn__login").onclick = () => location.href = "[[@{/login}]]";
-        document.getElementById("a__test").onclick = () =>
+        document.getElementById("a__test").onclick = () => {
             document.querySelector('.d__spinner').classList.remove('d__hidden');
             axios.post(fn_get_chaeking_api_url() + '/v1/auth/token', temp_user_info)
                 .then(res => res.data.data)
@@ -58,6 +58,9 @@
                     document.querySelector('.d__spinner').classList.add('d__hidden');
                     if(e['message'] === 'Network Error')
                         alert('API 서버가 유효하지 않습니다.')
+                    else
+                        alert(e['message']);
                 });
+        }
     </script>
 </th:block>
